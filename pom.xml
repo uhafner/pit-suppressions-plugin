@@ -11,12 +11,12 @@
     <relativePath />
   </parent>
 
-  <artifactId>pit-suppressions-plugin</artifactId>
+  <artifactId>pit-suppression-plugin</artifactId>
   <version>0.1.0</version>
 
   <packaging>jar</packaging>
 
-  <name>PIT suppressions plugin</name>
+  <name>PIT suppression plugin</name>
   <description>Provides several mutation filters to suppress PIT mutations.</description>
 
   <url>https://cs.hm.edu/~hafner</url>

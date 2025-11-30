@@ -1,4 +1,4 @@
-# PIT suppressions plugin
+# PIT suppression plugin
 
 [![CI on all platforms](https://github.com/uhafner/pit-suppressions-plugin/workflows/GitHub%20CI/badge.svg)](https://github.com/uhafner/pit-suppressions-plugin/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/uhafner/pit-suppressions-plugin/workflows/CodeQL/badge.svg)](https://github.com/uhafner/pit-suppressions-plugin/actions/workflows/codeql.yml)
@@ -20,7 +20,7 @@ All source code is licensed under the MIT license. Contributions to this library
 
 1. Install the jar file
 ```
-mvn install:install-file -Dfile=PATH_TO_JAR\pit-suppressions-plugin-0.1.0.jar -DgroupId=edu.hm.hafner -DartifactId=pit-suppressions-plugin -Dversion=0.1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=PATH_TO_JAR\pit-suppression-plugin-0.1.0.jar -DgroupId=edu.hm.hafner -DartifactId=pit-suppression-plugin -Dversion=0.1.0 -Dpackaging=jar
 ```
 
 2. Add the plugin as a dependency inside the PIT plugin section in your `pom.xml`
@@ -29,7 +29,7 @@ mvn install:install-file -Dfile=PATH_TO_JAR\pit-suppressions-plugin-0.1.0.jar -D
 
 <dependency>
     <groupId>edu.hm.hafner</groupId>
-    <artifactId>pit-suppressions-plugin</artifactId>
+    <artifactId>pit-suppression-plugin</artifactId>
     <version>0.1.0</version>
 </dependency>
 ```
@@ -117,7 +117,7 @@ If multiple fields are provided, **all conditions must be true** for a mutation 
                     </dependency>
                     <dependency>
                         <groupId>edu.hm.hafner</groupId>
-                        <artifactId>pit-suppressions-plugin</artifactId>//todo
+                        <artifactId>pit-suppression-plugin</artifactId>//todo
                         <version>0.1.0</version>
                     </dependency>
                 </dependencies>
