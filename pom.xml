@@ -65,7 +65,7 @@
         <version>1.20.2</version>
         <configuration>
           <features>
-            <feature>+FCSV(csvFile[src\main\resources\exclusions.csv])</feature>
+            <feature>+FCSV(csvFile[src/main/resources/exclusions.csv])</feature>
           </features>
         </configuration>
         <dependencies>
