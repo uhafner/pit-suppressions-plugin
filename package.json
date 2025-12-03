@@ -1,5 +1,5 @@
 {
-  "name": "pit-suppressions-plugin",
+  "name": "pit-suppression-plugin",
   "version": "1.0.0",
   "description": "Provides a Java API and model to collect code coverage results",
   "directories": {
