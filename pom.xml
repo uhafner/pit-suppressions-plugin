@@ -8,15 +8,15 @@
     <groupId>edu.hm.hafner</groupId>
     <artifactId>codingstyle-pom</artifactId>
     <version>5.40.0</version>
-    <relativePath />
+    <relativePath/>
   </parent>
 
-  <artifactId>pit-suppressions-plugin</artifactId>
-  <version>0.1.0</version>
+  <artifactId>pitmute</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
 
   <packaging>jar</packaging>
 
-  <name>PIT suppressions plugin</name>
+  <name>PitMute</name>
   <description>Provides several mutation filters to suppress PIT mutations.</description>
 
   <url>https://cs.hm.edu/~hafner</url>
@@ -37,9 +37,9 @@
   </developers>
 
   <scm>
-    <connection>scm:git:https://github.com/uhafner/pit-suppressions-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:uhafner/pit-suppressions-plugin.git</developerConnection>
-    <url>https://github.com/uhafner/pit-suppressions-plugin</url>
+    <connection>scm:git:https://github.com/uhafner/pitmute.git</connection>
+    <developerConnection>scm:git:git@github.com:uhafner/pitmute.git</developerConnection>
+    <url>https://github.com/uhafner/pitmute</url>
     <tag>${scmTag}</tag>
   </scm>
 
@@ -48,8 +48,34 @@
     <module.name>edu.hm.hafner.pit.suppress</module.name>
   </properties>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.pitest</groupId>
+      <artifactId>pitest-entry</artifactId>
+      <version>1.21.1</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.pitest</groupId>
+        <artifactId>pitest-maven</artifactId>
+        <version>1.20.2</version>
+        <configuration>
+          <features>
+            <feature>+FCSV(csvFile[src/main/resources/exclusions.csv])</feature>
+          </features>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>edu.hm.hafner</groupId>
+            <artifactId>pitmute</artifactId>
+            <version>0.1.0</version>
+          </dependency>
+        </dependencies>
+      </plugin>
       <plugin>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
